@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio | Proyecto Temático</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<style>
+    #infoExtra {
+      display: none; /* Oculta el párrafo al inicio */
+      margin-top: 10px;
+    }
+  </style>
+<body>
+    <header>
+        <h1> Día de la Tierra </h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="tabla.html">Tabla</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2> 🌱¿Qué es el Día de la Tierra?</h2>
+        <p>El Día de la Tierra es una fecha dedicada a concienciar sobre la protección del medio ambiente y el cuidado del planeta. 
+        Se celebra cada 22 de abril en todo el mundo.</p>
+
+        <h2> 🌎 ¿Cómo surgió?</h2>
+        <ul>
+            <li>Fue celebrado por primera vez el 22 de abril de 1970, 
+                impulsado por el senador estadounidense Gaylord Nelson.</li>
+            <li>En esa primera edición participaron millones de personas en EE. UU.,
+                exigiendo políticas ambientales más fuertes.</li>
+            <li>El evento marcó el inicio del movimiento ambiental moderno 
+                y contribuyó a la creación de la Agencia de Protección Ambiental (EPA) y leyes clave como la de Aire Limpio y Agua Limpia en EE. UU.</li>
+        </ul>
+
+        <h2> 🌿 Objetivos principales: </h2>
+        <ol>
+            <li>Concienciar sobre los problemas ambientales (contaminación, cambio climático, pérdida de biodiversidad).</li>
+            <li>Fomentar la acción individual y colectiva para proteger el planeta.</li>
+            <li>Promover políticas sostenibles a nivel local y global.</li>
+        </ol>
+        
+        <h2>🌍 ¿Qué se hace en este día?</h2>
+        <ul>
+            <li>Se organizan actividades educativas, campañas de limpieza,
+                plantación de árboles, conferencias y marchas ambientales.</li>
+            <li>Muchas escuelas y comunidades trabajan proyectos sobre sostenibilidad.</li>
+            <li>También se promueve el uso de energías limpias y la reducción de residuos.</li>
+        </ul>
+
+        <h2>♻️ Cambio climático</h2>
+        <p> El cambio climático está causando aumento de temperaturas, derretimiento de glaciares y fenómenos extremos como sequías e inundaciones.</p>
+   
+        <h2>🔄 Reciclaje</h2>
+        <p> Reciclar 1 tonelada de papel ahorra 17 árboles, 26,000 litros de agua y evita emisiones de CO₂.</p>
+    
+        <h2>⚡ Energías renovables</h2>
+        <p>La energía solar y eólica son limpias, inagotables y ya generan más del 30% de la electricidad en algunos países europeos.</p>
+    </main>
+
+<section><!-- Botón para mostrar información extra -->
+  <button onclick="mostrarInfo()">Haz clic para ver un dato curioso</button> <!-- Este botón ejecuta la función mostrarInfo() cuando se hace clic -->
+  <p id="infoExtra" style="display: none;"><!-- Párrafo que contiene la información extra, inicialmente oculto -->
+    🌍 El Día de la Tierra se celebró por primera vez el 22 de abril de 1970, y ayudó a impulsar la creación de la Agencia de Protección Ambiental en EE. UU., así como leyes ecológicas clave.
+  </p>
+</section>
+
+<!-- Formulario de contacto -->
+<section style="margin-top: 20px;">
+  <h2>Contacto</h2>
+  <form onsubmit="return validarFormulario()"><!-- Formulario que al enviarlo ejecuta la función validarFormulario() -->
+    <label>Nombre: <input type="text" id="nombre"></label><br><br><!-- Etiqueta y campo de entrada para el nombre del usuario -->
+    <label>Correo: <input type="email" id="correo"></label><br><br><!-- Etiqueta y campo de entrada para el correo del usuario -->
+    <input type="submit" value="Enviar"> <!-- Botón para enviar el formulario -->
+  </form>
+</section>
+
+<!-- Reproductor de video de YouTube -->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Gpc1s9qSeVM?si=xRRw536KO7ptsdYi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<script>
+  // Mensaje de bienvenida que aparece cuando la página carga
+  window.onload = function() {
+    alert("Conoce un poco sobre el día de la tierra 🌍.");  // Muestra una alerta al usuario
+    console.log("Página cargada correctamente.");  // Registra en la consola que la página se cargó correctamente
+  }
+
+  // Función que muestra el párrafo con la información extra
+  function mostrarInfo() {
+    const parrafo = document.getElementById("infoExtra"); // Obtiene el elemento con id "infoExtra"
+    parrafo.style.display = "block"; // Cambia el estilo para que el párrafo se muestre
+  }
+
+  // Función que valida el formulario antes de enviarlo
+  function validarFormulario() {
+    const nombre = document.getElementById("nombre").value;  // Obtiene el valor del campo de nombre
+    const correo = document.getElementById("correo").value;  // Obtiene el valor del campo de correo
+
+    // Verifica si los campos están vacíos
+    if (nombre.trim() === "" || correo.trim() === "") {
+      alert("Por favor completa todos los campos.");  // Muestra una alerta si algún campo está vacío
+      return false;  // Evita que el formulario se envíe
+    }
+
+    alert("Formulario enviado correctamente.");  // Muestra un mensaje de éxito si todos los campos están completos
+    return true;  // Permite que el formulario se envíe
+  }
+</script>
+</body>
+    <footer>
+        <p>© 2025 Proyecto Estudiantil</p>
+    </footer>
+</body>
+</html>

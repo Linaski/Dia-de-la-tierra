@@ -1,0 +1,192 @@
+/* --------------------------------- Estilos Generales --------------------------------- */
+body {
+  font-family: Arial, sans-serif; /* Establece la fuente para todo el cuerpo */
+  margin: 14px; /* Elimina los márgenes predeterminados del navegador */
+  padding: 0; /* Elimina el padding predeterminado */
+  background-color: #f4f4f4; /* Establece el color de fondo general */
+}
+/* Estilo base para el botón */
+button {
+    padding: 10px 20px; /* Espaciado interno: 10px arriba y abajo, 20px a los lados */
+    font-size: 16px; /* Tamaño de la fuente */
+    color: #fff; /* Color de texto blanco */
+    background-color: #4CAF50; /* Color de fondo verde */
+    border: none; /* Sin borde */
+    border-radius: 12px; /* Bordes redondeados con radio de 12px */
+    cursor: pointer; /* Muestra un cursor de mano cuando se pasa sobre el botón */
+    transition: background-color 0.3s, transform 0.2s; /* Transición suave para el color y efecto de transformación */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+  }
+  
+  /* Efecto al pasar el ratón por encima (hover) */
+  button:hover {
+    background-color: #64b1ec; /* Cambia el color de fondo cuando el mouse pasa por encima */
+    transform: scale(1.05); /* Agranda el botón ligeramente para un efecto de "pop" */
+  }
+  
+img {
+    height: 400px;/*alto de la imagen*/
+}
+iframe {
+    padding-top: 10px; /*espacio en la parte de arriba del video*/
+}
+/* ------------------------------ Estilo para el encabezado ---------------------------- */
+header {
+  background-color: #4CAF50; /* Establece el color de fondo verde para el encabezado */
+  color: white; /* Cambia el color del texto a blanco */
+  text-align: center; /* Centra el texto dentro del encabezado */
+  padding: 1rem 0; /* Agrega espacio (padding) arriba y abajo */
+}
+
+/* --------------------------- Estilos para el menú de navegación ------------------------- */
+nav ul {
+  list-style-type: none; /* Elimina los puntos de la lista en el menú */
+  padding: 0; /* Elimina el padding predeterminado */
+  margin: 0; /* Elimina el margen predeterminado */
+  background-color: #333; /* Establece un color de fondo oscuro para el menú */
+  text-align: center; /* Centra el contenido dentro del menú */
+}
+
+nav ul li {
+  display: inline; /* Muestra los elementos de la lista en línea (horizontalmente) */
+}
+
+nav ul li a {
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  color: white; /* Cambia el color del texto a blanco */
+  padding: 14px 20px; /* Agrega espacio (padding) alrededor de los enlaces */
+  display: inline-block; /* Hace que el enlace sea un bloque en línea */
+}
+
+nav ul li a:hover {
+  background-color: #575757; /* Cambia el fondo cuando el usuario pasa el mouse */
+}
+
+/* ----------------------------- Estilos para las tablas ------------------------------ */
+table {
+  width: 100%; /* Hace que la tabla ocupe todo el ancho disponible */
+  border-collapse: collapse; /* Elimina los espacios entre celdas */
+  margin-bottom: 20px; /* Agrega espacio debajo de la tabla */
+  background-color: rgb(176, 215, 233);
+  transition: background-color 0.3s;
+}
+
+th, td {
+  border: 1px solid #ddd; /* Establece un borde gris claro para las celdas */
+  padding: 8px; /* Agrega espacio (padding) dentro de las celdas */
+  text-align: left; /* Alinea el texto a la izquierda dentro de las celdas */
+}
+
+th, td:hover {
+    background-color: #e0e0d6;  /* Cambia el color de fondo a un tono gris claro cuando el mouse pasa sobre la celda */
+    padding: 10px;  /* Añade 10 píxeles de espaciado interno alrededor del contenido dentro de la celda */
+    text-align: center;  /* Alinea el texto al centro dentro de la celda */
+  }
+
+th {
+  background-color:#e0e0d6; /* Cambia el color de fondo de los encabezados a verde */
+  color: white; /* Cambia el color del texto en los encabezados a blanco */
+}
+
+/* ----------------------------------- Estilos de Footer ------------------------------- */
+footer {
+  background-color: #333; /* Establece un color de fondo oscuro para el pie de página */
+  color: white; /* Cambia el color del texto a blanco */
+  text-align: center; /* Centra el contenido del pie de página */
+  padding: 5px 0; /* Agrega espacio (padding) arriba y abajo */
+}
+
+/* -------------------------- Estilos para dispositivos pequeños (Mobile First) -------------------------- */
+@media (max-width: 768px) {
+  /* Estilos para pantallas más pequeñas que 768px (tabletas y teléfonos) */
+  header h1 {
+    font-size: 1.5em; /* Reduce el tamaño del texto del título en pantallas pequeñas */
+  }
+
+  nav ul {
+    text-align: left; /* Cambia el menú para alinearlo a la izquierda en pantallas pequeñas */
+  }
+
+  nav ul li {
+    display: block; /* Muestra los elementos de la lista en bloque (verticalmente) */
+    width: 100%; /* Hace que cada elemento ocupe el 100% del ancho disponible */
+  }
+
+  nav ul li a {
+    padding: 12px 20px; /* Aumenta el padding para que sea más accesible en móviles */
+    width: 100%; /* Hace que el enlace ocupe todo el ancho disponible */
+  }
+
+  main {
+    padding: 15px; /* Reduce el padding en el main para adaptarse a pantallas más pequeñas */
+  }
+
+  table {
+    display: block; /* Hace que la tabla sea bloque para permitir desplazamiento horizontal */
+    overflow-x: auto; /* Permite el desplazamiento horizontal si la tabla es más ancha que la pantalla */
+    white-space: nowrap; /* Impide que el contenido de la tabla se rompa en múltiples líneas */
+    background-color: rgb(176, 215, 233);
+    transition: background-color 0.3s;
+}
+
+  th, td {
+    padding: 10px; /* Aumenta el padding dentro de las celdas para mejorar la legibilidad en pantallas pequeñas */
+    font-size: 14px; /* Reduce el tamaño de la fuente en la tabla */
+  }
+  
+  th, td:hover {
+    background-color: #e0e0d6;  /* Cambia el color de fondo a un tono gris claro cuando el mouse pasa sobre la celda */
+    padding: 10px;  /* Añade 10 píxeles de espaciado interno alrededor del contenido dentro de la celda */
+    text-align: center;  /* Alinea el texto al centro dentro de la celda */
+  }
+
+  th {
+    font-size: 16px; /* Aumenta el tamaño de la fuente para los encabezados en pantallas pequeñas */
+  }
+  img {
+    max-width: 100%; /* La imagen nunca será más ancha que su contenedor */
+    max-height: 100%; /* Mantiene la relación de aspecto original de la imagen */
+    display: block; /* Elimina cualquier espacio en blanco debajo de la imagen */
+    margin: 0 auto; /* Centra la imagen dentro de su contenedor */
+  }
+  iframe {
+    max-width: 100%; /* El iframe (en este caso el video) nunca será más ancho que su contenedor, se ajusta al 100% del ancho disponible */
+    height: auto; /* Mantiene la relación de aspecto del video, ajustando su altura proporcionalmente al ancho */
+    display: block; /* Elimina el pequeño espacio blanco debajo del video (esto es porque los iframe son elementos en línea por defecto) */
+    margin: 0 auto; /* Centra el video dentro de su contenedor */
+    padding-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+  /* Estilos para pantallas más pequeñas que 480px (smartphones) */
+  header h1 {
+    font-size: 1.2em; /* Hace aún más pequeño el título */
+  }
+
+  p {
+    font-size: 14px; /* Ajusta el tamaño de los párrafos */
+  }
+  
+  button {
+    width: 100%; /* Hace que el botón ocupe todo el ancho disponible en pantallas pequeñas */
+    padding: 15px 0; /* Aumenta el padding vertical del botón para mejor accesibilidad */
+  }
+
+  /* Hacer que los videos sean responsivos */
+  iframe {
+    max-width: 100%; /* El iframe (en este caso el video) nunca será más ancho que su contenedor, se ajusta al 100% del ancho disponible */
+    height: auto; /* Mantiene la relación de aspecto del video, ajustando su altura proporcionalmente al ancho */
+    display: block; /* Elimina el pequeño espacio blanco debajo del video (esto es porque los iframe son elementos en línea por defecto) */
+    margin: 0 auto; /* Centra el video dentro de su contenedor */
+    padding-top: 10px;
+    }
+  img {
+    max-width: 100%; /* La imagen nunca será más ancha que su contenedor */
+    max-height: 100%; /* Mantiene la relación de aspecto original de la imagen */
+    display: block; /* Elimina cualquier espacio en blanco debajo de la imagen */
+    margin: 0 auto; /* Centra la imagen dentro de su contenedor */
+  }
+
+}
+
